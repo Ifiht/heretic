@@ -101,7 +101,7 @@ class Model:
                 # (some models like gpt-oss have issues with explicit None).
                 if quantization_config is not None:
                     extra_kwargs["quantization_config"] = quantization_config
-                if settings.offload_folder is not None:
+                if settings.offload_folder:
                     extra_kwargs["offload_folder"] = settings.offload_folder
                     extra_kwargs["offload_state_dict"] = True
 
@@ -298,7 +298,7 @@ class Model:
         extra_kwargs = {}
         if quantization_config is not None:
             extra_kwargs["quantization_config"] = quantization_config
-        if self.settings.offload_folder is not None:
+        if self.settings.offload_folder:
             extra_kwargs["offload_folder"] = self.settings.offload_folder
             extra_kwargs["offload_state_dict"] = True
 
