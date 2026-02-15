@@ -34,7 +34,7 @@ dependencies = [
     "pydantic-settings~=2.10",
     "questionary~=2.1",
     "rich~=14.1",
-    "transformers~=4.57",
+    "transformers~=5.1",
 ]
 
 [project.optional-dependencies]
