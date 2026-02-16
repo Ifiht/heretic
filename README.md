@@ -1,4 +1,5 @@
-This fork has been updated to use transformers 5 for compatibility with Mistral AI models.
+> [!NOTE]  
+> This fork has been updated to use transformers 5 for compatibility with Mistral AI models.
 
 <img width="128" height="128" align="right" alt="Logo" src="https://github.com/user-attachments/assets/df5f2840-2f92-4991-aa57-252747d7182e" />
 
