@@ -110,11 +110,6 @@ class Settings(BaseSettings):
         description='Maximum memory to allocate per device (e.g., {"0": "20GB", "cpu": "64GB"}).',
     )
 
-    offload_folder: str = Field(
-        default="./offload",
-        description="Folder to offload weights to disk when model doesn't fit in VRAM (required for large models on limited VRAM).",
-    )
-
     trust_remote_code: bool | None = Field(
         default=None,
         description="Whether to trust remote code when loading the model.",
