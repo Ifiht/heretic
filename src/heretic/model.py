@@ -259,10 +259,7 @@ class Model:
             merged_model = peft_model.merge_and_unload()
             return merged_model
         else:
-            # Non-quantized model - offload to CPU before merging to avoid CUDA OOM.
-            print("* Offloading model to CPU...")
-            self.model.to("cpu")
-            empty_cache()
+            # Non-quantized model - can merge directly
             print("* Merging LoRA adapters into base model...")
             merged_model = self.model.merge_and_unload()
             # merge_and_unload() modifies self.model in-place, destroying LoRA adapters.
